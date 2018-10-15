@@ -1,0 +1,7 @@
+{
+  "providers": {
+	"AzureLUIS": {
+	  "module": "/ice/nlp/providers/nlp.azure.js"
+	}
+  }
+}

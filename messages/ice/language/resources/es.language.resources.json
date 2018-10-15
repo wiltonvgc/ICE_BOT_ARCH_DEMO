@@ -1,0 +1,12 @@
+{
+  "ERR_DEFAULT": "Algo impredecible sucedió, ¿podría intentarlo de nuevo?",
+  "INT_CONJUNCAO": "e",
+  "INT_Bebida": "Bebida",
+  "INT_caipirinha":"caipirinha",
+  "INT_caipirosca":"caipirosca",
+  "INT_cuba livre":"cuba livre",
+  "INT_dry martini":"dry martini",
+  "INT_aperol spritz":"aperol spritz",
+  "INT_dry":"dry martini",
+  "INT_martini":"dry martini"
+}

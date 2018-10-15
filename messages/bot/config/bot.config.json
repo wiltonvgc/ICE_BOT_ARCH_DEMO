@@ -1,0 +1,555 @@
+{
+  "botHandler": {
+	"botProvider": "azurebotservice"
+  },
+  "conversation": {
+	"conversationProvider": "matrix"
+  },
+  "nlp": {
+	"nlpProvider": "AzureLUIS",
+	"intents": ["PedirBebida","ContarPiada","FecharConta","None"
+	],
+	"entities": ["Bebida"]
+  },
+  "condition": {
+	"conditions": [
+		{
+			"conditionName": "LIMITE_BEBIDAS_CONSUMIDAS",
+			"conditionModule": "/ice/condition/modules/context.condition.js",
+			"conditionCacheTTLsec": 0,
+			"conditionParameters": {
+				"conditionAction": "gte",
+				"firstOperand": {
+				"name": "COUNT_BEBIDAS_CONSUMIDAS",
+				"contextStore": "conversation"
+				},
+				"secondOperand": {
+				"value": 3
+				}
+			}
+			},
+			{
+				"conditionName": "PENDENTE_DE_INFORMAR_BEBIDA",
+				"conditionModule": "/ice/condition/modules/context.condition.js",
+				"conditionCacheTTLsec": 0,
+				"conditionParameters": {
+					"conditionAction": "eq",
+					"firstOperand": {
+					"name": "FLAG_PENDENCIA_BEBIDA_INFORMADA",
+					"contextStore": "conversation"
+					},
+					"secondOperand": {
+					"value": 1
+					}
+				}
+				},
+			{
+				"conditionName": "LIMITE_NAO_ENTENDIMENTO",
+				"conditionModule": "/ice/condition/modules/context.condition.js",
+				"conditionCacheTTLsec": 0,
+				"conditionParameters": {
+				"conditionAction": "gte",
+						"firstOperand": {
+							"name": "COUNT_NAO_ENTENDIMENTO",
+							"contextStore": "conversation"
+						},
+						"secondOperand": {
+							"value": 4
+						}
+					}
+			},
+			{
+				"conditionName": "BEBIDA_SERVIDA",
+				"conditionModule": "/ice/condition/modules/context.condition.js",
+				"conditionCacheTTLsec": 0,
+				"conditionParameters": {
+				"conditionAction": "eq",
+						"firstOperand": {
+							"name": "COUNT_BEBIDAS_CONSUMIDAS",
+							"contextStore": "conversation"
+						},
+						"secondOperand": {
+							"value": 0
+						}
+					}
+			},
+			{
+				"conditionName": "CONTROLE_QUANTIDADES_BEBIDAS_MESMO_PEDIDO",
+				"conditionModule": "/ice/condition/modules/context.condition.js",
+				"conditionCacheTTLsec": 0,
+				"conditionParameters": {
+				"conditionAction": "eq",
+						"firstOperand": {
+							"name": "CONTROLE_QTD_MESMO_PEDIDO",
+							"contextStore": "conversation"
+						},
+						"secondOperand": {
+							"value": 1
+						}
+					}
+			}
+
+		]
+		},
+  "featureMapper": {
+	"featureMapperProvider": "AzureLUIS",
+	"thresholdIntents": 0.2,
+	"conditionFetchingRules": {
+	  "LIMITE_BEBIDAS_CONSUMIDAS": {
+		"when": [],
+		"whenNot": []
+		},
+		"PENDENTE_DE_INFORMAR_BEBIDA": {
+			"when": [],
+			"whenNot": []
+		},
+		"LIMITE_NAO_ENTENDIMENTO": {
+			"when": [],
+			"whenNot": []
+		},
+		"BEBIDA_SERVIDA": {
+			"when": [],
+			"whenNot": []
+		},
+		"CONTROLE_QUANTIDADES_BEBIDAS_MESMO_PEDIDO": {
+			"when": [],
+			"whenNot": []
+		}
+	}
+  },
+  "actionDispatcher": {
+	"thresholdActions": 1.0,
+	"actions": [
+	  {"actionName": "SERVIR_BEBIDA",
+			"actionModule": "/ice/action/modules/standard.action.js", 
+			"actionConfig": {
+				"actionContext": "withFeatures",
+				"actionCommands": [
+				
+				{
+					"command": "addConta" ,
+				  	"commandValue": 1,
+					"commandTarget": {
+						"contextStore": "conversation",
+						"name": "VALOR_CONTA"
+					} 
+				},
+				{
+					"command": "addBebida" ,
+				  	"commandValue": 1,
+					"commandTarget": {
+						"contextStore": "conversation",
+						"name": "COUNT_BEBIDAS_CONSUMIDAS"
+					} 
+				},
+				{
+					"command": "set" ,
+				  	"commandValue": 0,
+						"commandTarget": {
+							"contextStore": "conversation",
+							"name": "COUNT_NAO_ENTENDIMENTO"
+						} 
+				},
+				{
+					"command": "set" ,
+					"commandValue": 0,
+					"commandTarget": {
+						"contextStore": "conversation",
+						"name": "FLAG_PENDENCIA_BEBIDA_INFORMADA"
+					} 
+				}
+
+
+				],
+				"channelData": {},
+				"inputHint": "accepting"
+			},
+			"phrasalModule": "/bot/code/phrasals/ENTITY_REPLACEMENT.phrasal.js",
+			"phrasalConfig": "/bot/config/phrasals/#actionName#.phrasal.config.json"
+			},
+			{"actionName": "CONTAR_PIADA",
+				"actionModule": "/ice/action/modules/standard.action.js", 
+				"actionConfig": {
+					"actionContext": "withFeatures",
+					"actionCommands": [
+						{
+							"command": "set" ,
+				  		"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "COUNT_NAO_ENTENDIMENTO"
+							} 
+						}
+					],
+					"channelData": {},
+					"inputHint": "accepting"
+				},
+				"phrasalModule": "/bot/code/phrasals/ENTITY_REPLACEMENT.phrasal.js",
+				"phrasalConfig": "/bot/config/phrasals/#actionName#.phrasal.config.json"
+			},
+			{"actionName": "AVISAR_LIMITE_BEBIDAS",
+				"actionModule": "/ice/action/modules/standard.action.js", 
+				"actionConfig": {
+					"actionContext": "withFeatures",
+					"actionCommands": [
+						{
+							"command": "set" ,
+				  			"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "COUNT_NAO_ENTENDIMENTO"
+							} 
+						}
+						
+
+					],
+					"channelData": {},
+					"inputHint": "accepting"
+				},
+				"phrasalModule": "/bot/code/phrasals/ENTITY_REPLACEMENT.phrasal.js",
+				"phrasalConfig": "/bot/config/phrasals/#actionName#.phrasal.config.json"
+			},
+			
+			{"actionName": "FECHAR_CONTA",
+				"actionModule": "/ice/action/modules/standard.action.js", 
+				"actionConfig": {
+					"actionContext": "withFeatures",
+					"actionCommands": [
+						{
+							"command": "set" ,
+				  			"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "COUNT_NAO_ENTENDIMENTO"
+							}
+						},
+						{
+								"command": "set" ,
+								"commandValue": 0,
+								"commandTarget": {
+									"contextStore": "conversation",
+									"name": "COUNT_BEBIDAS_CONSUMIDAS"
+								} 
+						},
+						{
+							"command": "set" ,
+							"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "FLAG_PENDENCIA_BEBIDA_INFORMADA"
+							} 
+						},
+						{
+							"command": "setContaFinal" ,
+							"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "VALOR_CONTA_FINAL"
+							} 
+						},
+						{
+							"command": "set" ,
+							"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "VALOR_CONTA"
+							} 
+						}
+
+									  	  
+					
+					],
+					"channelData": {},
+					"inputHint": "accepting"
+				},
+				"phrasalModule": "/bot/code/phrasals/ENTITY_REPLACEMENT.phrasal.js",
+				"phrasalConfig": "/bot/config/phrasals/#actionName#.phrasal.config.json"
+			},
+
+			{"actionName": "AVISAR_NAO_ENTENDIMENTO",
+				"actionModule": "/ice/action/modules/standard.action.js", 
+				"actionConfig": {
+					"actionContext": "withFeatures",
+					"actionCommands": [
+						{
+							"command": "add" ,
+				  			"commandValue": 1,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "COUNT_NAO_ENTENDIMENTO"
+							} 
+									  	  
+						} ],
+					"channelData": {},
+					"inputHint": "accepting"
+				},
+				"phrasalModule": "/bot/code/phrasals/ENTITY_REPLACEMENT.phrasal.js",
+				"phrasalConfig": "/bot/config/phrasals/#actionName#.phrasal.config.json"
+			},
+			{"actionName": "PERGUNTAR_QUAL_BEBIDA",
+				"actionModule": "/ice/action/modules/standard.action.js", 
+				"actionConfig": {
+					"actionContext": "withFeatures",
+					"actionCommands": [
+						{
+							"command": "set" ,
+							"commandValue": 1,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "FLAG_PENDENCIA_BEBIDA_INFORMADA"
+							} 
+						}
+					],
+					"channelData": {},
+					"inputHint": "accepting"
+				},
+				"phrasalModule": "/bot/code/phrasals/ENTITY_REPLACEMENT.phrasal.js",
+				"phrasalConfig": "/bot/config/phrasals/#actionName#.phrasal.config.json"
+			},
+			{"actionName": "FECHANDO_A_CONTA_POR_NAO_ENTENDIMENTO",
+				"actionModule": "/ice/action/modules/standard.action.js", 
+				"actionConfig": {
+					"actionContext": "withFeatures",
+					"actionCommands": [
+						{
+							"command": "set" ,
+				  			"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "COUNT_NAO_ENTENDIMENTO"
+							}
+						},
+						{
+								"command": "set" ,
+								"commandValue": 0,
+								"commandTarget": {
+									"contextStore": "conversation",
+									"name": "COUNT_BEBIDAS_CONSUMIDAS"
+								} 
+						},
+						{
+							"command": "set" ,
+							"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "FLAG_PENDENCIA_BEBIDA_INFORMADA"
+							} 
+						},
+						{
+							"command": "setContaFinal" ,
+							"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "VALOR_CONTA_FINAL"
+							} 
+						},
+						{
+							"command": "set" ,
+							"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "VALOR_CONTA"
+							} 
+						}
+
+							
+					],
+					"channelData": {},
+					"inputHint": "accepting"
+				},
+				"phrasalModule": "/bot/code/phrasals/ENTITY_REPLACEMENT.phrasal.js",
+				"phrasalConfig": "/bot/config/phrasals/#actionName#.phrasal.config.json"
+			},
+			{"actionName": "FECHANDO_A_CONTA_SEM_SERVIR_BEBIDA",
+				"actionModule": "/ice/action/modules/standard.action.js", 
+				"actionConfig": {
+					"actionContext": "withFeatures",
+					"actionCommands": [
+						{
+							"command": "set" ,
+				  		"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "COUNT_NAO_ENTENDIMENTO"
+							}
+						},
+						{
+								"command": "set" ,
+								"commandValue": 0,
+								"commandTarget": {
+									"contextStore": "conversation",
+									"name": "COUNT_BEBIDAS_CONSUMIDAS"
+								} 
+						},
+						{
+							"command": "set" ,
+							"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "FLAG_PENDENCIA_BEBIDA_INFORMADA"
+							} 
+						}
+							
+					],
+					"channelData": {},
+					"inputHint": "accepting"
+				},
+				"phrasalModule": "/bot/code/phrasals/ENTITY_REPLACEMENT.phrasal.js",
+				"phrasalConfig": "/bot/config/phrasals/#actionName#.phrasal.config.json"
+			},
+			{"actionName": "AVISAR_QUE_NAO_SERA_ATENDIDO",
+				"actionModule": "/ice/action/modules/standard.action.js", 
+				"actionConfig": {
+					"actionContext": "withFeatures",
+					"actionCommands": [
+						{
+							"command": "set" ,
+				  		"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "COUNT_NAO_ENTENDIMENTO"
+							}
+						}
+							
+					],
+					"channelData": {},
+					"inputHint": "accepting"
+				},
+				"phrasalModule": "/bot/code/phrasals/ENTITY_REPLACEMENT.phrasal.js",
+				"phrasalConfig": "/bot/config/phrasals/#actionName#.phrasal.config.json"
+			},
+			{"actionName": "AVISAR_LIMITE_BEBIDAS_MESMO_PEDIDO",
+				"actionModule": "/ice/action/modules/standard.action.js", 
+				"actionConfig": {
+					"actionContext": "withFeatures",
+					"actionCommands": [
+						{
+							"command": "set" ,
+				  			"commandValue": 0,
+							"commandTarget": {
+								"contextStore": "conversation",
+								"name": "COUNT_NAO_ENTENDIMENTO"
+							}
+						}
+							
+					],
+					"channelData": {},
+					"inputHint": "accepting"
+				},
+				"phrasalModule": "/bot/code/phrasals/ENTITY_REPLACEMENT.phrasal.js",
+				"phrasalConfig": "/bot/config/phrasals/#actionName#.phrasal.config.json"
+			}
+
+
+	]},	
+  "contextStore": {
+	"contextStoreProvider": "azurebotservice",
+	"initialize": [
+	  {
+		"initValue": 0,
+			"initTarget": {
+		  	"contextStore": "conversation",
+		  	"name": "COUNT_BEBIDAS_CONSUMIDAS"
+			}
+		},
+		{
+			"initValue": 0,
+			"initTarget": {
+				"contextStore": "conversation",
+				"name": "VALOR_CONTA"
+			}
+		},
+		{
+			"initValue": 0,
+			"initTarget": {
+				"contextStore": "conversation",
+				"name": "COUNT_NAO_ENTENDIMENTO"
+			}	
+		},
+		{
+			"initValue": 0,
+			"initTarget": {
+				"contextStore": "conversation",
+				"name": "FLAG_PENDENCIA_BEBIDA_INFORMADA"
+			}	
+		},
+		{
+			"initValue": 0,
+			"initTarget": {
+				"contextStore": "conversation",
+				"name": "VALOR_CONTA_FINAL"
+			}	
+		},
+		{
+			"initValue": 0,
+			"initTarget": {
+				"contextStore": "conversation",
+				"name": "CONTROLE_QTD_MESMO_PEDIDO"
+			}	
+		},
+		{
+			"initValue": "",
+			"initTarget": {
+				"contextStore": "conversation",
+				"name": "STRING_SERVIR_BEBIDA_PT"
+			}	
+		},
+		{
+			"initValue": "",
+			"initTarget": {
+				"contextStore": "conversation",
+				"name": "STRING_SERVIR_BEBIDA_EN"
+			}	
+		},
+		{
+			"initValue": "",
+			"initTarget": {
+				"contextStore": "conversation",
+				"name": "STRING_SERVIR_BEBIDA_ES"
+			}	
+		},
+		{
+			"initValue": "",
+			"initTarget": {
+				"contextStore": "conversation",
+				"name": "STRING_SERVIR_BEBIDA_IT"
+			}	
+		}
+	]
+  },
+  "language": {
+	"languageProvider": "azuretextanalytics",
+	"fallbackLanguage": "pt",
+	"localeResources": {
+	  "pt": "/bot/config/resources/pt.language.resources.json",
+	  "en": "/bot/config/resources/en.language.resources.json",
+	  "es": "/bot/config/resources/es.language.resources.json",
+	  "de": "/bot/config/resources/de.language.resources.json",
+	  "fr": "/bot/config/resources/fr.language.resources.json",
+	  "it": "/bot/config/resources/it.language.resources.json"
+	}
+  },
+  "sentiment": {
+	"sentimentProvider": "azuretextanalytics"
+  },
+  "translation": {
+	"translationProvider": "googletranslate"
+  },
+  "logger": {
+	"loggerProviders": [
+	  "azureTable"
+	],
+	"logLevel": {
+	  "botHandler": "PERF",
+	  "conversation": "PERF",
+	  "condition": "PERF",
+	  "featureMapper": "PERF",
+	  "actionDispatcher": "PERF",
+	  "language": "PERF",
+	  "sentiment": "PERF",
+	  "translation": "PERF",
+	  "phrasalComposer": "PERF",
+	  "nlp": "PERF"
+	}
+  }
+}

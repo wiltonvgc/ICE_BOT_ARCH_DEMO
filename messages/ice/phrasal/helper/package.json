@@ -1,0 +1,5 @@
+{
+  "name": "phrasalHelper",
+  "version": "1.0.0",
+  "main": "./phrasalHelper.core.js"
+}

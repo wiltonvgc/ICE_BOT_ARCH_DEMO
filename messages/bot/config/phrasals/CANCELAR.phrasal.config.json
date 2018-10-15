@@ -1,0 +1,17 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "OK, no hay problema. Vamos cancelar su compra de #entityString#"
+          ],
+          "pt": [
+            "Ok, sem problemas, vamos cancelar sua compra de #entityString#"
+          ],
+          "en": [
+            "Ok, We'll pick your #entityString#"
+          ]
+        }
+      }
+    }
+  }

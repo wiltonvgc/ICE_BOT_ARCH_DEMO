@@ -1,0 +1,17 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "Genial, vamos procesar su compra de #entityString#"
+          ],
+          "pt": [
+            "Ótimo, vamos processar a compra do #entityString#"
+          ],
+          "en": [
+            "Great, we'll procced your #entityString# purchase"
+          ]
+        }
+      }
+    }
+  }

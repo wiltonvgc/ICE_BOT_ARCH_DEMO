@@ -1,0 +1,20 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "#STR_SERVIR_BEBIDA_ES# !"
+          ],
+          "pt": [
+            "#STR_SERVIR_BEBIDA_PT# !"
+          ],
+          "en": [
+            "#STR_SERVIR_BEBIDA_EN# !"
+          ],
+          "it": [
+            "#STR_SERVIR_BEBIDA_IT# !"
+          ]
+        }
+      }
+    }
+  }

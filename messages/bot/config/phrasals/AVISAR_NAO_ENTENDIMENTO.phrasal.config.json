@@ -1,0 +1,20 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "¡Disculpa, no entendí!"
+          ],
+          "pt": [
+            "Desculpa, não entendi!"
+          ],
+          "en": [
+            "Sorry, I did not understand!"
+          ],
+          "it": [
+            "Scusa non ho capito!"
+          ]
+        }
+      }
+    }
+  }

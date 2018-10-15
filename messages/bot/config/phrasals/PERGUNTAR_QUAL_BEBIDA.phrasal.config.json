@@ -1,0 +1,20 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "¿Qué bebida desea beber?"
+          ],
+          "pt": [
+            "Qual bebida você deseja tomar?"
+          ],
+          "en": [
+            "What drink do you want?"
+          ],
+          "it": [
+            "Che bevanda vuoi?"
+          ]
+        }
+      }
+    }
+  }

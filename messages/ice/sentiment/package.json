@@ -1,0 +1,5 @@
+{
+  "name": "sentiment",
+  "version": "1.0.0",
+  "main": "./sentiment.core.js"
+}

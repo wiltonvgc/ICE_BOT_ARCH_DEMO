@@ -1,0 +1,15 @@
+{
+  "localeResources": {
+	"pt": "/ice/language/resources/pt.language.resources.json",
+	"en": "/ice/language/resources/en.language.resources.json",
+	"es": "/ice/language/resources/es.language.resources.json",
+	"de": "/ice/language/resources/de.language.resources.json",
+	"fr": "/ice/language/resources/fr.language.resources.json",
+	"it": "/ice/language/resources/it.language.resources.json"
+  },
+  "providers": {
+	"azuretextanalytics": {
+	  "module": "/ice/language/providers/language.azure.js"
+	}
+  }
+}

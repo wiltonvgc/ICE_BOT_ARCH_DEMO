@@ -1,0 +1,4 @@
+DirectLineClientBatchWS-4868|DladZ9Ehb5qIJZTjHvvjjU|I|{StartConversation}|Olá, em que posso ajudar?|expectingInput|{"ivrCommand":"keep"}|00:00.052|PASSED
+DirectLineClientBatchWS-4868|DladZ9Ehb5qIJZTjHvvjjU|0|Quero vender banana|Desculpa, não entendi!|acceptingInput|{}|00:00.106|ERROR
+DirectLineClientBatchWS-4868|DladZ9Ehb5qIJZTjHvvjjU|1|Voce e um viado|Qual bebida você deseja tomar?|acceptingInput|{}|00:01.639|ERROR
+DirectLineClientBatchWS-4868|DladZ9Ehb5qIJZTjHvvjjU|2|Quero comprar maçã

@@ -1,0 +1,29 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "WEBSITE_SLOT_NAME": "Production",
+    "UseTableStorageForConversationState": "true",
+    "SCM_USE_FUNCPACK": "1",
+    "FUNCTIONS_EXTENSION_VERSION": "~1",
+    "ScmType": "None",
+    "WEBSITE_AUTH_ENABLED": "False",
+    "BotEnv": "prod",
+    "BotId": "ICE_BotArch_BarmanBot",
+    "MicrosoftAppId": "e26b25a6-68ef-48a6-bc7b-e9329b73019c",
+    "AzureWebJobsDashboard": "DefaultEndpointsProtocol=https;AccountName=icebotarchbarmanbotfunct;AccountKey=wTwLQGUVulC8ND8TQZrVczgG4isUAfpX43675Ruz3lEAFIcMZe4+AkNCnIj+a3PVD8sxcw7mF2YKg2839sWi4g==;",
+    "BotOpenIdMetadata": "",
+    "AzureWebJobsBotFrameworkDirectLineSecret": "",
+    "WEBSITE_NODE_DEFAULT_VERSION": "6.9.1",
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "DefaultEndpointsProtocol=https;AccountName=icebotarchbarmanbotfunct;AccountKey=wTwLQGUVulC8ND8TQZrVczgG4isUAfpX43675Ruz3lEAFIcMZe4+AkNCnIj+a3PVD8sxcw7mF2YKg2839sWi4g==;",
+    "WEBSITE_CONTENTSHARE": "icebotarchdemo",
+    "AzureWebJobsBotFrameworkDirectLineEndpoint": "https://directline.botframework.com/",
+    "BotDevAppInsightsKey": "e0aeab67-f251-4990-8a29-2258f9bce792",
+    "MicrosoftAppPassword": "7d+R5gSmIZ66Jr^n",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=icebotarchbarmanbotfunct;AccountKey=wTwLQGUVulC8ND8TQZrVczgG4isUAfpX43675Ruz3lEAFIcMZe4+AkNCnIj+a3PVD8sxcw7mF2YKg2839sWi4g==;",
+    "WEBSITE_SITE_NAME": "icebotarchdemo",
+    "BotDevAppInsightsName": "ICE_BotArch_Demosgbpf4",
+    "BotDevAppInsightsAppId": "42aacc60-caeb-4c22-a6ff-6bc373d562cd",
+    "BotStateEndpoint": "",
+    "maindir":"D:\\home\\site\\wwwroot\\messages"
+  }
+}

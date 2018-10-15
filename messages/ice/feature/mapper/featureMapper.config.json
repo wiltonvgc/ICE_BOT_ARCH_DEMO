@@ -1,0 +1,7 @@
+{
+  "providers": {
+	"AzureLUIS": {
+	  "module": "/ice/feature/mapper/providers/featureMapper.azure.js"
+	}
+  }
+}

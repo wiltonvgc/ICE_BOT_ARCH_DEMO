@@ -1,0 +1,5 @@
+{
+  "name": "actionHelper",
+  "version": "1.0.0",
+  "main": "./actionHelper.core.js"
+}

@@ -1,0 +1,3 @@
+DirectLineClientBatchWS-3872|70dSAp2EJIe6vMyPtvOXXY|I|{StartConversation}|Olá, em que posso ajudar?|expectingInput|{"ivrCommand":"keep"}|00:00.117|PASSED
+DirectLineClientBatchWS-3872|70dSAp2EJIe6vMyPtvOXXY|0|Quero vender banana|O português ganhou um pijama de presente. Gostou tanto que só tira na hora de dormir!|acceptingInput|{}|00:00.466|ERROR
+DirectLineClientBatchWS-3872|70dSAp2EJIe6vMyPtvOXXY|1|Voce e um viado

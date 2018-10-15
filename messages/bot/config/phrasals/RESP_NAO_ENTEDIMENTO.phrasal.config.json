@@ -1,0 +1,17 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "Que pena, no he comprendido. Puedes hacer su pedido una vez más?"
+          ],
+          "pt": [
+            "Desculpe, não entendi. Você pode repetir seu pedido?"
+          ],
+          "en": [
+            "Sorry, I didn't understand. Could you repeat your order?"
+          ]
+        }
+      }
+    }
+  }

@@ -1,0 +1,28 @@
+{
+  "name": "barman-botarch",
+  "version": "1.0.0",
+  "description": "barman-botarch",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "botbuilder": "^3.13.1",
+    "botbuilder-azure": "^3.0.4",
+    "csv-parse": "^2.0.0",
+    "elasticsearch": "^14.0.0",
+    "moment": "^2.19.2",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "stack-trace": "^0.0.10",
+    "winston": "2.4.0",
+    "winston-azure-application-insights": "^1.1.1",
+    "winston-azure-sw": "^1.0.2",
+    "winston-elasticsearch": "^0.5.3",
+    "winston-loggly-bulk": "^2.0.1",
+    "winston-logstash": "^0.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error:  no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,10 @@
+{
+  "providers": {
+	"cennml": {
+	  "module": "/ice/conversation/providers/conversation.neuralnetwork.js"
+	},
+	"matrix": {
+	  "module": "/ice/conversation/providers/conversation.matrix.js"
+	}
+  }
+}

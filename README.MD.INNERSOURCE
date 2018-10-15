@@ -1,0 +1,50 @@
+# ICE BOT ARCHITECTURE FOR DEMONSTRATIONS PURPOSES
+
+THIS IS A VANILLA AND SIMPLE VERSION OF THE ICE (INTELLIGENT COGNITIVE ENGINE) DEVELOPED BY ACCENTURE DIGITAL DSD GROUP IN LATAM 
+
+## Getting Started
+
+These instructions will get you a copy of the fonts for adjustments and development in your local machine. 
+
+DO NOT ALTER OR PUSH CODE UNLESS GUIDED BY JOSE.PORTO AND/OR GIANCARLO.BONANSEA
+
+### Prerequisites
+
+Get the files cloned from innersource repository
+
+### Configure Git for the first time
+
+```
+git config --global user.name "<YOUR ACCENTURE EID>"
+git config --global user.email "<YOUR ACCENTURE EMAIL>"
+```
+
+### Working with your repository
+
+```
+git clone git clone https://<YOUR ACCENTURE EID>@innersource.accenture.com/scm/dsdlat/ice_botarch_demo.git
+```
+
+### My code is ready to be pushed
+If you already have code ready to be pushed to this repository then run this in your terminal.
+
+```
+cd ice_botarch_demo
+git init
+git add --all
+git commit -m "<TAG FOR THIS VERSION>"
+git remote add origin https://<YOUR ACCENTURE EID>@innersource.accenture.com/scm/dsdlat/ice_botarch_demo.git
+git push -u origin master
+```
+
+===================================================================================================================================================
+
+
+### My code is already tracked by Git
+If your code is already tracked by Git then set this repository as your "origin" to push to.
+
+```
+cd ice_botarch_demo
+git remote set-url origin https://<YOUR ACCENTURE EID>@innersource.accenture.com/scm/dsdlat/ice_botarch_demo.git
+git push -u origin master
+```

@@ -1,0 +1,5 @@
+{
+  "name": "featureHelper",
+  "version": "1.0.0",
+  "main": "./featureHelper.core.js"
+}

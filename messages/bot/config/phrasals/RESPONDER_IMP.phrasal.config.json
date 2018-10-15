@@ -1,0 +1,17 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "Por favor calmate y haga su solicitacion una vez más"
+          ],
+          "pt": [
+            "Por favor, mantenha a calma e repita seu pedido"
+          ],
+          "en": [
+            "Please, calm down and repeat your order"
+          ]
+        }
+      }
+    }
+  }

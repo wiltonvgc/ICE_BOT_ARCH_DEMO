@@ -1,0 +1,5 @@
+{
+  "name": "actionDispatcher",
+  "version": "1.0.0",
+  "main": "./actionDispatcher.core.js"
+}

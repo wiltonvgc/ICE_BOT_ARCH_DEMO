@@ -1,0 +1,17 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "Perdón, no puedo comprender su pedido. No puedo seguir con este proceso."
+          ], 
+          "pt": [
+            "Desculpe, não entendi mesmo seu pedido. Não posso continuar o atendimento"
+          ], 
+          "en": [
+            "Sorry, I didn't understand your request. I can't continue this conversation" 
+          ]
+        }
+      }
+    }
+  }

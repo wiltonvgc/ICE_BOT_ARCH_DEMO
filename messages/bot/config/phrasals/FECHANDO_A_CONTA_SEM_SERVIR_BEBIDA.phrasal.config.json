@@ -1,0 +1,20 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "Usted no bebió nada!"
+          ],
+          "pt": [
+            "Você não consumiu nada!"
+          ],
+          "en": [
+            "You did not consume anything!"
+          ],
+          "it": [
+            "Non hai consumato nulla!"
+          ]
+        }
+      }
+    }
+  }

@@ -1,0 +1,128 @@
+{
+  "botHandler": {
+	"providersConfig": {
+	  "azurebotservice": {
+		"MicrosoftAppId": "b1308a89-3eb2-401e-88bd-227c636f1050",
+		"MicrosoftAppPassword": "DDH8ZY{ttd?]n1:F",	
+		"BotStateEndpoint": "",
+		"BotOpenIdMetadata": ""
+	  }
+	}
+  },
+  "conversation": {
+	"providersConfig": {
+	  "matrix": {
+		"endpoint": "/bot/config/features_actions.csv",
+		"apikey": ""
+	  }
+	}
+  },
+  "nlp": {
+	"providersConfig": {
+	  "AzureLUIS": {
+		"languages": 
+		{
+		"pt": {
+			"endpoint": "https://eastus.api.cognitive.microsoft.com/luis/v2.0/apps/",
+			"appid": "d2fd7b1b-36c3-45c5-83bb-edd601a579c8",
+			"apikey": "1ece24608bc74fbc9bb6b7429d03f2e1"
+		},
+		"en": {
+				"endpoint": "https://eastus.api.cognitive.microsoft.com/luis/v2.0/apps/",
+				"appid": "99b51512-aa68-4ee2-a71b-b68c9e9db02b",
+				"apikey": "83c7c207df364ae4a642f24084ce4673"
+			},
+		  "es": {
+				"endpoint": "https://eastus.api.cognitive.microsoft.com/luis/v2.0/apps/",
+				"appid": "c81555e8-88cf-4e89-9fc0-d8bce29e24cd",
+				"apikey": "8d2004e67cdb41e197fee03aa9864da2"
+		  },
+		  "de": {
+				"endpoint": "https://eastus.api.cognitive.microsoft.com/luis/v2.0/apps/",
+				"appid": "d2fd7b1b-36c3-45c5-83bb-edd601a579c8",
+				"apikey": "1ece24608bc74fbc9bb6b7429d03f2e1"
+		  },
+		  "fr": {
+				"endpoint": "https://eastus.api.cognitive.microsoft.com/luis/v2.0/apps/",
+				"appid": "d2fd7b1b-36c3-45c5-83bb-edd601a579c8",
+				"apikey": "1ece24608bc74fbc9bb6b7429d03f2e1"
+			},
+			"it": {
+				"endpoint": "https://eastus.api.cognitive.microsoft.com/luis/v2.0/apps/",
+				"appid": "bab6ef75-2aef-4592-92b3-9963b22fcfbc",
+				"apikey": "4d26e35da9ce4e1f8c40ff8ad3c329e4"
+			}
+			
+
+		}
+	  }
+	}
+  },
+  "contextStore": {
+	"providersConfig": {
+	  "azurebotservice": {
+		"account": "icebotarchbarmanbotfunct",
+		"key": "IeqZqoLw089wtp+d7RiXVFQNbZor9fnMpVwze9WWu6nxyEOLw1OPVnH+dVw8K3qiiE4IiJwmTDVDCSpQF/Rjjg==",
+		"table": "context"
+	  }
+	}
+  },
+  "language": {
+	"providersConfig": {
+	  "azuretextanalytics": {
+		"endpoint": "https://eastus.api.cognitive.microsoft.com/text/analytics/v2.0/languages",
+		"apikey": "176b12236f65471096b6b9be57845e95"
+	  }
+	}
+ },
+	"sentiment": {
+		"providersConfig": {
+			"azuretextanalytics": {
+			"endpoint": "https://eastus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment",
+			"apikey": "2bce4085fdda4b10b15c0a29dc49569f"
+			}
+		}
+  },
+  "translation": {
+	"providersConfig": {
+	  "googletranslate": {
+		"endpoint": "https://translation.googleapis.com/language/translate/v2?key=",
+		"apikey": "AIzaSyDfxSooBdbV44GoQRj0sPVrVNNGZxeHp8s"
+	  }
+	}
+  },
+  "logger": {
+	"providersConfig": {
+	  "loggly": {
+		"token": "cae035f9-022b-4529-b043-3537017e7a20",
+		"subdomain": "acnbrasilbot",
+		"tags": [
+		  "ice"
+		],
+		"json": true
+	  },
+	  "logstash": {
+		"port": 5010,
+		"host": "acnbrasilelk.centralus.cloudapp.azure.com",
+		"max_connect_retries": 1,
+		"node_name": "acnbrasilbot"
+	  },
+	  "elasticsearch": {
+		"host": "acnbrasilelk.centralus.cloudapp.azure.com:9200"
+	  },
+	  "azureApplicationInsight": {
+		"key": "ec2a85ea-d7cb-4c89-b0da-51862bd7fd67"
+	  },
+	  "azureTable": {
+		"account": "icebotarchbarmanbotfunct",
+		"key": "IeqZqoLw089wtp+d7RiXVFQNbZor9fnMpVwze9WWu6nxyEOLw1OPVnH+dVw8K3qiiE4IiJwmTDVDCSpQF/Rjjg==",
+		"table": "log",
+		"level": "silly",
+		"metaAsColumns": false
+	  },
+	  "console": {
+		"silent": true
+	  }
+	}
+  }
+}

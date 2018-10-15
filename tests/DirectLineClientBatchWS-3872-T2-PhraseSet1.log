@@ -1,0 +1,3 @@
+DirectLineClientBatchWS-3872|GB3qlqAFi73EIBzoP8PDcV|I|{StartConversation}|Olá, em que posso ajudar?|expectingInput|{"ivrCommand":"keep"}|00:00.002|PASSED
+DirectLineClientBatchWS-3872|GB3qlqAFi73EIBzoP8PDcV|0|Quero vender banana|O português ganhou um pijama de presente. Gostou tanto que só tira na hora de dormir!|acceptingInput|{}|00:00.328|ERROR
+DirectLineClientBatchWS-3872|GB3qlqAFi73EIBzoP8PDcV|1|Quero comprar maçã

@@ -1,0 +1,7 @@
+{
+  "providers": {
+	"azurebotservice": {
+	  "module": "/ice/botHandler/providers/botHandler.azure.js"
+	}
+  }
+}

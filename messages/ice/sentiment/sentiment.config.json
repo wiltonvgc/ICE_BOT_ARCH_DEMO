@@ -1,0 +1,7 @@
+{
+  "providers": {
+	"azuretextanalytics": {
+	  "module": "/ice/sentiment/providers/sentiment.azure.js"
+	}
+  }
+}

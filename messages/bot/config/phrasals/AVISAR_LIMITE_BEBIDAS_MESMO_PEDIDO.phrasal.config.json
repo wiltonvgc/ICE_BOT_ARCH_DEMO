@@ -1,0 +1,20 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "Sólo se permite el consumo de 3 bebidas al máximo!"
+          ],
+          "pt": [
+            "Só é permitido o consumo de no máximo 3 bebidas! MESMO PEDIDO!"
+          ],
+          "en": [
+            "Only 3 drinks can be consumed at most!"
+          ],
+          "it": [
+            "Solo 3 bevande possono essere consumate al massimo!"
+          ]
+        }
+      }
+    }
+  }

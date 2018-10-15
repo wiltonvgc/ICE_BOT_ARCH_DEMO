@@ -1,0 +1,20 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "¡Es necesario hacer un pedido!"
+          ],
+          "pt": [
+            "É necessário fazer um pedido!"
+          ],
+          "en": [
+            "You have to place an order!"
+          ],
+          "it": [
+            "Devi effettuare un ordine!" 
+          ]
+        }
+      }
+    }
+  }

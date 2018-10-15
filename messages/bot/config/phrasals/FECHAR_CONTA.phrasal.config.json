@@ -1,0 +1,20 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "Su cuenta es #CONTA_FINAL#!"
+          ],
+          "pt": [
+            "Sua conta está fechada!O valor da conta é #CONTA_FINAL#!"
+          ],
+          "en": [
+            "Your bill is #CONTA_FINAL#!"
+          ],
+          "it": [
+            "Il tuo conto è #CONTA_FINAL#!"
+          ]
+        }
+      }
+    }
+  }

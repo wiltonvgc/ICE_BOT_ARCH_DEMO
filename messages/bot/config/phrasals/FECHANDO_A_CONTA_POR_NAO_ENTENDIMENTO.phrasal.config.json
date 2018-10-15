@@ -1,0 +1,20 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "¡No entendí! Su cuenta es #CONTA_FINAL#!"
+          ],
+          "pt": [
+            "Não entendi novamente! Sua conta está fechada! O valor da conta é #CONTA_FINAL#!"
+          ],
+          "en": [
+            "I do not understand again! Your bill is closed! The value of the bill is #CONTA_FINAL#!"
+          ],
+          "it": [
+            "Non capisco più! Il tuo conto è chiuso! Il valore del conto è #CONTA_FINAL# !"
+          ]
+        }
+      }
+    }
+  }

@@ -1,0 +1,17 @@
+{
+  "directLineSecret": "GD2bMfDR7JI.cwA.ohc.7lYkoqQw3Kok1JWhecGaQQ_vgzvZRMSBMm0X_sqaF58",
+  "threads": 1,
+  "timeoutSecs": 30,
+  "testset": {
+	"PhraseSet1": {
+	  "input": [
+		"oi td bem?"
+	  ],
+	  "output": [
+		[
+		  "Olá, em que posso ajudar?"
+		]
+	  ]
+	}
+}
+}

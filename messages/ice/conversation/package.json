@@ -1,0 +1,5 @@
+{
+  "name": "conversation",
+  "version": "1.0.0",
+  "main": "./conversation.core.js"
+}

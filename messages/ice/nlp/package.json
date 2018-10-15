@@ -1,0 +1,5 @@
+{
+  "name": "nlp",
+  "version": "1.0.0",
+  "main": "./nlp.core.js"
+}

@@ -1,0 +1,3 @@
+DirectLineClientBatchWS-16244|3rWEMsEpqthK27rkjwFAhc|I|{StartConversation}|Olá, em que posso ajudar?|expectingInput|{"ivrCommand":"keep"}|00:00.163|ERROR
+DirectLineClientBatchWS-16244|3rWEMsEpqthK27rkjwFAhc|0|Quero beber caipirinha|Aqui está sua caipirinha !|acceptingInput|{}|00:00.400|ERROR
+DirectLineClientBatchWS-16244|3rWEMsEpqthK27rkjwFAhc|1|Tell me a joke|Anton, do you think I’m a bad mother? My name is Paul!|acceptingInput|{}|00:02.012|ERROR

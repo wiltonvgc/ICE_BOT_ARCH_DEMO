@@ -1,0 +1,5 @@
+{
+  "name": "condition",
+  "version": "1.0.0",
+  "main": "./condition.core.js"
+}

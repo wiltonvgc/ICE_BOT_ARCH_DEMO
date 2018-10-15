@@ -1,0 +1,17 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "Que pena contigo. No es posible hacer estos dos aciones para #entityString#."
+          ],
+          "pt": [
+            "Desculpe, não podemos comprar e cancelar #entityString#."
+          ],
+          "en": [
+            "It's not possible buy and sell #entityString#"
+          ]
+        }
+      }
+    }
+  }

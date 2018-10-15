@@ -1,0 +1,26 @@
+DirectLineClientBatchWS-3872|3qSAdfVSIyDHAKv6733C6F|I|{StartConversation}|Olá, em que posso ajudar?|expectingInput|{"ivrCommand":"keep"}|00:04.272|PASSED
+DirectLineClientBatchWS-3872|3qSAdfVSIyDHAKv6733C6F|0|Quero vender banana|O português ganhou um pijama de presente. Gostou tanto que só tira na hora de dormir!|acceptingInput|{}|00:08.247|ERROR
+DirectLineClientBatchWS-3872|3qSAdfVSIyDHAKv6733C6F|1|Voce e um viado|TypeError: Cannot read property 'intents' of null
+    at _composeIntentsFunction (D:\home\site\wwwroot\messages\ice\feature\mapper\providers\featureMapper.azure.js:21:23)
+    at Object._traceFunction [as traceFunction] (D:\home\site\wwwroot\messages\ice\logger\logger.core.js:189:19)
+    at _composeIntents (D:\home\site\wwwroot\messages\ice\feature\mapper\providers\featureMapper.azure.js:20:19)
+    at _mapPromise (D:\home\site\wwwroot\messages\ice\feature\mapper\providers\featureMapper.azure.js:86:21)
+    at D:\home\site\wwwroot\messages\ice\logger\logger.core.js:175:7
+    at Promise._execute (D:\home\site\wwwroot\messages\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (D:\home\site\wwwroot\messages\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (D:\home\site\wwwroot\messages\node_modules\bluebird\js\release\promise.js:79:10)
+    at Object._tracePromise [as tracePromise] (D:\home\site\wwwroot\messages\ice\logger\logger.core.js:163:12)
+    at Object._map [as map] (D:\home\site\wwwroot\messages\ice\feature\mapper\providers\featureMapper.azure.js:18:16)
+    at _invokePromise (D:\home\site\wwwroot\messages\ice\conversation\conversation.core.js:37:20)
+    at D:\home\site\wwwroot\messages\ice\logger\logger.core.js:175:7
+    at Promise._execute (D:\home\site\wwwroot\messages\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (D:\home\site\wwwroot\messages\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (D:\home\site\wwwroot\messages\node_modules\bluebird\js\release\promise.js:79:10)
+    at Object._tracePromise [as tracePromise] (D:\home\site\wwwroot\messages\ice\logger\logger.core.js:163:12)
+    at Object._invoke [as invoke] (D:\home\site\wwwroot\messages\ice\conversation\conversation.core.js:36:16)
+    at _getNLPOutPut (D:\home\site\wwwroot\messages\index.js:95:21)
+    at D:\home\site\wwwroot\messages\node_modules\botbuilder\lib\dialogs\IntentRecognizer.js:23:25
+    at D:\home\site\wwwroot\messages\node_modules\botbuilder\lib\dialogs\IntentRecognizerSet.js:84:17
+    at D:\home\site\wwwroot\messages\node_modules\async\lib\async.js:52:16
+    at D:\home\site\wwwroot\messages\node_modules\async\lib\async.js:322:29|ignoringInput|{"ivrCommand":"transfer"}|00:04.082|ERROR
+DirectLineClientBatchWS-3872|3qSAdfVSIyDHAKv6733C6F|2|Quero comprar maçã

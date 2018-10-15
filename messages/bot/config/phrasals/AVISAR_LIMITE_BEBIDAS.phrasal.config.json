@@ -1,0 +1,20 @@
+{
+    "phrases": {
+      "styles": {
+        "default": {
+          "es": [
+            "¡No! ¡Usted bebió demasiado!"
+          ],
+          "pt": [
+            " Não! Já bebeu demais!"
+          ],
+          "en": [
+            "No! You drank too much!"
+          ],
+          "it":[
+            "No! Ne hai avuto abbastanza!"
+          ]
+        }
+      }
+    }
+  }

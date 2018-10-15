@@ -1,0 +1,7 @@
+{
+  "providers": {
+	"googletranslate": {
+	  "module": "/ice/translation/providers/translation.google.js"
+	}
+  }
+}

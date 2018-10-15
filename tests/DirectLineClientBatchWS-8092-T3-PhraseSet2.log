@@ -1,0 +1,4 @@
+DirectLineClientBatchWS-8092|3oYsIebnY6jBrrnrfpRjQr|I|{StartConversation}|Olá, em que posso ajudar?|expectingInput|{"ivrCommand":"keep"}|00:00.565|PASSED
+DirectLineClientBatchWS-8092|3oYsIebnY6jBrrnrfpRjQr|0|Quero vender banana|O português ganhou um pijama de presente. Gostou tanto que só tira na hora de dormir!|acceptingInput|{}|00:01.740|ERROR
+DirectLineClientBatchWS-8092|3oYsIebnY6jBrrnrfpRjQr|1|Voce e um viado|Qual bebida você deseja tomar?|acceptingInput|{}|00:00.341|ERROR
+DirectLineClientBatchWS-8092|3oYsIebnY6jBrrnrfpRjQr|2|Quero comprar maçã

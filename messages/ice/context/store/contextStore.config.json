@@ -1,0 +1,7 @@
+{
+  "providers": {
+	"azurebotservice": {
+	  "module": "/ice/context/store/providers/contextStore.azure.js"
+	}
+  }
+}

@@ -1,0 +1,21 @@
+{
+ "name": "ACNBrasilBotTest",
+ "version": "1.0.0",
+ "description": "ACNBrasilBotTest",
+ "main": "index.js",
+ "dependencies": {
+  "bluebird": "^3.5.1",
+  "botframework-directlinejs": "^0.9.14",
+  "csv-parse": "^2.0.0",
+  "request": "^2.83.0",
+  "request-promise": "^4.2.2",
+  "swagger-client": "^2.2.21",
+  "websocket": "^1.0.25",
+  "xhr2": "^0.1.4"
+ },
+ "scripts": {
+  "test": "echo \"Error:  no test specified\" && exit 1"
+ },
+ "author": "",
+ "license": "ISC"
+}
